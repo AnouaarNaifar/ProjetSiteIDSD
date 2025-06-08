@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+       <!--généré depuis XML via XSLT -->     
+
+    <meta charset="UTF-8">
+    <title>Détail Étudiant</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/detail_etudiant.css">
+    <script>
+<!--   JS charge un XML, applique une transformation XSLT et injecte le résultat dans HTML -->
+     // Fonction qui charge un fichier XML ou XSL depuis un chemin donné
+    function loadXMLDoc(filename) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", filename, false);
+        xhttp.send();// Envoie la requête
+        return xhttp.responseXML;
+    }
+
+ // Fonction qui récupère l'ID depuis l'URL 
+    function getIdFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('id') || '';// Retourne la valeur de "id" ou chaîne vide si non trouvée
+    }
+ // Fonction principale qui applique la transformation XSLT
+    function applyXSLT() {
+        var xml = loadXMLDoc('../xml/etudiants_moyenne.xml');  // Chemin vers ton fichier XML
+        var xsl = loadXMLDoc('../html/detail_etudiant.xsl');         // Chemin vers ton XSLT corrigé
+// Crée un transformateur XSLT
+        var xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+// Récupère l'ID de l'étudiant depuis l'URL
+        var id = getIdFromUrl();
+        xsltProcessor.setParameter(null, "id", id);
+ // Transforme le XML avec le XSLT en un fragment HTML
+        var resultDocument = xsltProcessor.transformToFragment(xml, document);
+        document.getElementById('result').appendChild(resultDocument);
+    }
+// Exécute la fonction applyXSLT() dès que la page est complètement chargée
+    window.onload = applyXSLT;
+    </script>
+</head>
+<body>
+
+    <div id="result">
+        <!-- Le contenu généré par le XSLT sera injecté ici -->
+    </div>
+
+</body>
+</html>

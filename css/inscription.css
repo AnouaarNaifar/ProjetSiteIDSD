@@ -1,0 +1,224 @@
+:root {
+  --blue-color: #0E6EB8;/* Couleur principale utilisée pour les titres */
+}
+body , h2, h4, label, input, select, button, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);/* Effet de profondeur */
+    margin: auto;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 80%;
+
+}
+
+h1{
+  color: var(--blue-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+.ticket{
+    background-color:#e3e3e3;
+    color: #00509e;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+/*Form*/
+label,p {
+    margin-top: 10px;
+    font-weight: 600;
+    display: block;
+    font-size: 20px;
+}
+input, select {
+    width: 100%; 
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #bbb;
+    border-radius: 8px; 
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.3);
+    outline: none;
+}
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    font-weight: bold;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1.2); 
+    margin: 0; 
+}
+
+
+
+/*bouton*/
+button {
+    width: 100%;
+    background: linear-gradient(135deg, #0056b3, #003366); 
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #003366, #001a33);
+    transform: translateY(-2px); /* Effet de léger soulèvement */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+
+
+
+/* Style pour le champ de saisie des requêtes XPath */
+.query-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: monospace; /* Police à largeur fixe pour mieux visualiser le code */
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+/* Container pour afficher les résultats des requêtes avec défilement */
+.result-container {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto; /* Défilement vertical si le contenu dépasse */
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+table {
+  width: 100%;
+}
+/* Alternance de couleurs pour les lignes du tableau */
+.result-table tr:nth-child(even) {
+  background-color: #c5deff; /* bleu clair */
+}
+td {
+  padding: 10px;
+}
+ /* Styles pour le formulaire qui contient l'entrée de la requête */
+ .query-form {
+  margin-bottom: 20px;
+}
+.query-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: 30px 0;
+}
+h3{
+  color: var(--blue-color);
+  font-size: 1.5rem;
+}
+section{
+  padding: 50px 100px;
+}
+code{
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 25px;
+}
+
+
+
+/*bouton*/
+.query-button {
+  width: 30%;
+  background: linear-gradient(135deg, #0056b3, #003366); 
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 500px;
+}
+
+.query-button:hover {
+  background: linear-gradient(135deg, #003366, #001a33);
+  transform: translateY(-2px); /* Effet de léger soulèvement */
+}
+.Req{
+  margin-left: 650px;
+  font-weight: 400 !important;
+
+}

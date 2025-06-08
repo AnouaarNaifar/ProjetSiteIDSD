@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../html/detail_etudiant.xsl"?>
+<etudiants>
+    <etudiant niveau="1" id="e1_1">
+        <photo src="../assets/etudiant_1.jpg"/>
+        <nom>Amor</nom>
+        <prenom>Mahran</prenom>
+        <date_naissance>22/02/2004</date_naissance>
+        <adresse>
+            <rue>123 Rue de la République</rue>
+            <ville>Monastir</ville>
+            <code_postal>5025</code_postal>
+        </adresse>
+        <telephone>0123456789</telephone>
+        <email>mahran.amor@gmail.com</email>
+        <formation>Cycle d'ingénieur</formation>
+        <specialite>Ingénierie des données et systèmes décisionnels</specialite>
+        <niveau>1 ére année</niveau>
+        <notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note>
+        </notes>
+        <moyenne>15.44</moyenne>
+    </etudiant>
+        <etudiant niveau="1" id="e1_2"><photo src="../assets/etudiant_2.jpg"/><nom>Naifar</nom><prenom>Anouaar</prenom><date_naissance>01/05/2002</date_naissance><adresse>
+            <rue>Route Mahdia</rue>
+            <ville>Sfax</ville>
+            <code_postal>3014</code_postal>
+        </adresse>
+        <telephone>0123456789</telephone>
+        <email>naifar.anouaar@gmail.com</email>
+        <formation>Cycle d'ingénieur</formation>
+        <specialite>Ingénierie des données et systèmes décisionnels</specialite>
+        <niveau>1 ére année</niveau>
+        <notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note>
+        </notes>
+        <moyenne>15.44</moyenne>
+    </etudiant>
+        <etudiant niveau="1" id="e1_3">
+        <photo src="../assets/etudiant_3.jpg"/><nom>kaaniche</nom><prenom>Emna</prenom><date_naissance>19/11/2002</date_naissance><adresse>
+            <rue>Manouba</rue>
+            <ville>Tunis</ville>
+            <code_postal>3014</code_postal>
+        </adresse><telephone>0123456789</telephone><email>kaaniche.emna@gmail.com</email><formation>Cycle d'ingénieur</formation><specialite>Ingénierie des données et systèmes décisionnels</specialite><niveau>1 ére année</niveau><notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note>
+        </notes><moyenne>15.44</moyenne></etudiant><etudiant niveau="2" id="e2_1"><photo src="../assets/etudiant_1.jpg"/><nom>Amor</nom><prenom>Mahran</prenom><date_naissance>22/02/2004</date_naissance><adresse>
+            <rue>123 Rue de la République</rue>
+            <ville>Monastir</ville>
+            <code_postal>5025</code_postal>
+        </adresse><telephone>0123456789</telephone><email>mahran.amor@gmail.com</email><formation>Cycle d'ingénieur</formation><specialite>Ingénierie des données et systèmes décisionnels</specialite><niveau>1 ére année</niveau><notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note> 
+        </notes><moyenne>15.44</moyenne></etudiant><etudiant niveau="2" id="e2_2"><photo src="../assets/etudiant_2.jpg"/><nom>Naifar</nom><prenom>Anouaar</prenom><date_naissance>01/05/2002</date_naissance><adresse>
+            <rue>Route Mahdia</rue>
+            <ville>Sfax</ville>
+            <code_postal>3014</code_postal>
+        </adresse><telephone>0123456789</telephone><email>naifar.anouaar@gmail.com</email><formation>Cycle d'ingénieur</formation><specialite>Ingénierie des données et systèmes décisionnels</specialite><niveau>1 ére année</niveau><notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note>
+        </notes><moyenne>15.44</moyenne></etudiant><etudiant niveau="2" id="e2_3"><photo src="../assets/etudiant_3.jpg"/><nom>kaaniche</nom><prenom>Emna</prenom><date_naissance>19/11/2002</date_naissance><adresse>
+            <rue>Manouba</rue>
+            <ville>Tunis</ville>
+            <code_postal>3014</code_postal>
+        </adresse><telephone>0123456789</telephone><email>kaaniche.emna@gmail.com</email><formation>Cycle d'ingénieur</formation><specialite>Ingénierie des données et systèmes décisionnels</specialite><niveau>1 ére année</niveau><notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note>
+        </notes><moyenne>15.44</moyenne></etudiant><etudiant niveau="3" id="e3_1"><photo src="../assets/etudiant_1.jpg"/><nom>Amor</nom><prenom>Mahran</prenom><date_naissance>22/02/2004</date_naissance><adresse>
+            <rue>123 Rue de la République</rue>
+            <ville>Monastir</ville>
+            <code_postal>5025</code_postal>
+        </adresse><telephone>0123456789</telephone><email>mahran.amor@gmail.com</email><formation>Cycle d'ingénieur</formation><specialite>Ingénierie des données et systèmes décisionnels</specialite><niveau>1 ére année</niveau><notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note> 
+        </notes><moyenne>15.44</moyenne></etudiant><etudiant niveau="3" id="e3_2"><photo src="../assets/etudiant_2.jpg"/><nom>Naifar</nom><prenom>Anouaar</prenom><date_naissance>01/05/2002</date_naissance><adresse>
+            <rue>Route Mahdia</rue>
+            <ville>Sfax</ville>
+            <code_postal>3014</code_postal>
+        </adresse><telephone>0123456789</telephone><email>naifar.anouaar@gmail.com</email><formation>Cycle d'ingénieur</formation><specialite>Ingénierie des données et systèmes décisionnels</specialite><niveau>1 ére année</niveau><notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note>
+        </notes><moyenne>15.44</moyenne></etudiant><etudiant niveau="3" id="e3_3"><photo src="../assets/etudiant_3.jpg"/><nom>kaaniche</nom><prenom>Emna</prenom><date_naissance>19/11/2002</date_naissance><adresse>
+            <rue>Manouba</rue>
+            <ville>Tunis</ville>
+            <code_postal>3014</code_postal>
+        </adresse><telephone>0123456789</telephone><email>kaaniche.emna@gmail.com</email><formation>Cycle d'ingénieur</formation><specialite>Ingénierie des données et systèmes décisionnels</specialite><niveau>1 ére année</niveau><notes>
+            <note module="Mathématiques fondamentales" coeff="3"> 15.5 </note>
+            <note module="Informatique appliquées" coeff="2"> 18.0 </note>
+            <note module="Probabilités" coeff="4"> 14.0 </note>
+            <note module="Mathématiques appliquées" coeff="3"> 15.5 </note>
+            <note module="Informatique fondamentales" coeff="2.5"> 13.0 </note>
+            <note module="Anglais" coeff="1.5"> 16.5 </note>
+            <note module="Français" coeff="1.5"> 16.5 </note>
+            <note module="Droit de travail" coeff="1"> 16.5 </note>
+            <note module="Management de l'entreprise" coeff="2"> 16.5 </note>
+        </notes><moyenne>15.44</moyenne></etudiant></etudiants>

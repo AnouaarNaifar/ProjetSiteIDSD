@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ENETCOM - Inscription</title>
+</head>
+<body>
+<!-- Header -->    
+<header class="header">
+    <div class="container">
+        <!-- Logo à gauche -->
+        <div class="logo">
+            <a href="index.html"><img src="../assets/logoecole.png" alt="#"></a>
+        </div>
+        <!-- End Logo -->
+    <!-- Navigation à droite -->
+        <nav class="main-menu">
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i> <span>Accueil</span></a> </li>
+                    <li><a href="formation.html"><i class="fa fa-graduation-cap"></i> <span>Formations</span></a>
+                        <ul class="dropdown">
+                            <li><a href="etudiants.html?id=1">1ère Année</a></li>
+                            <li><a href="etudiants.html?id=2">2ème Année</a></li>
+                            <li><a href="etudiants.html?id=3">3ème Année</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="active" href="inscription.html"><i class="fa fa-user-plus"></i> <span>Inscription</span></a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+        </nav>
+    </div>
+</header>
+
+    
+    
+<div class="content">
+    
+    <div class="form-container">
+        <h1>Inscription</h1>
+        <div class="ticket">Informations générales de l'étudiant</div>
+
+        <form action="#" method="Post">
+            <label for="fliere">Filière</label>
+            <select id="fliere" name="fliere" required>
+                <option value="">Sélectionnez votre filière</option>
+                <option value="gt">Génie des Télécommunications</option>
+                <option value="gii">Génie Informatique Industrielle</option>
+                <option value="gec">Génie des Systèmes Electroniques de Communication</option>
+                <option value="idsd">Ingénierie des Données et Systèmes Décisionnels</option>
+
+            </select>
+            <label for="niveau">Niveau</label>
+            <select id="niveau" name="niveau" required>
+                <option value="">Sélectionnez votre niveau</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <br>
+            <label for="cin">CIN / Passeport pour les étudiants étrangers</label>
+            <input type="text" id="cin" name="cin" required>
+            <br>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <div class="radio-group">
+                <p>Sexe </p>
+                <label>
+                    <input type="radio" name="Sexe" value="H">H
+                </label>
+                <label>
+                   <input type="radio" name="Sexe" value="F">F
+                </label>
+            </div>
+            
+            <label for="date">Date de naissance</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" required>
+            
+            <div class="ticket">Emplacement et coordonnées</div>
+
+            <label for="adresse">Adresse complète</label>
+            <input type="text" id="adresse" name="adresse" required>
+
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="ville" required>
+            <br>
+            <label for="gouvernorat">Gouvernorat</label>
+            <input type="text" id="gouvernorat" name="gouvernorat" required>
+
+            <label for="code">Code postal</label>
+            <input type="text" id="code" name="code" required>
+            
+            <div class="ticket">Baccalauréat</div>
+            
+            <label for="bac">Année du baccalauréat</label>
+            <input type="number" id="bac" name="quantity" min="2020" max="2025" value="1">
+            
+            <label for="section">Section</label>
+            <select id="section" name="section" required>
+                <option value="">Sélectionnez votre section</option>
+                <option value="sc">Sciences Expérimentales</option>
+                <option value="math">Mathématique</option>
+                <option value="tech">Technique</option>
+                <option value="info">Informaique</option>
+                <option value="eco">Economie et gestion</option>
+            </select>
+<br>        
+            <div class="radio-group">
+
+            <p>Session </p>
+            <label>
+                <input type="radio" name="session" value="principale" checked> Principale
+            </label>
+            <label>
+                <input type="radio" name="session" value="controle">Contrôle
+            </label>
+        </div>
+<br>
+            <label for="moyenne">Moyenne du Bac</label>
+            <input type="text" id="moyenne" name="moyenne" required>
+
+            <label for="lycee">Etablissement d'origine</label>
+            <input type="text" id="lycee" name="lycee" required>
+            <br>
+            <div class="ticket">Espace libre</div>
+            <label for="Commentaire">Commentaire </label>
+            <textarea id="Commentaire" name="C" rows="6" cols="180"> </textarea>
+            
+            <button type="submit">Soumettre → </button>
+
+        </form>
+    </div>
+</div>
+    <!-- Footer -->
+
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Colonne À propos -->
+            <div class="footer-col">
+                <h4>À propos</h4>
+                <p>La filière IDSD forme des experts en ingénierie des données et systèmes décisionnels, combinant modélisation mathématique, outils informatiques et technologies d'IA.</p>
+            </div>
+    
+            <!-- Colonne Contact -->
+            <div class="footer-col">
+                <h4>Nous contacter</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> ENET'Com, Université de Sfax</li>
+                    <li><i class="fas fa-phone"></i> +216 XX XXX XXX</li>
+                    <li><i class="fas fa-envelope"></i> idsd@ENET'Com.tn</li>
+                </ul>
+            </div>
+    
+            <!-- Colonne Newsletter -->
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Votre email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+    
+            <!-- Colonne Carte -->
+            <div class="footer-col map-col">
+                <h4>Localisation</h4>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.7138177838597!2d10.753072424388673!3d34.83828727287112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002cd2cef7333d%3A0xaa3a1cf6d7fb55b0!2sEcole%20nationale%20d&#39;Electronique%20et%20des%20T%C3%A9l%C3%A9communications%20de%20Sfax%D8%8C%20Technopole%20Sfax%2C%20Route%20Tunis%20km%2011%2C%20cite%20Ons%2C%20Sfax!5e0!3m2!1sfr!2stn!4v1744558309929!5m2!1sfr!2stn" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 Filière IDSD - Tous droits réservés</p>
+            <p>www.enetcom.rnu.tn | Station Sfax</p>
+        </div>
+    </footer>
+</body>
+</html>

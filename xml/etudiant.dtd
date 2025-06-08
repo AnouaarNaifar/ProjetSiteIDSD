@@ -1,0 +1,23 @@
+<!ELEMENT etudiants (etudiant*)>
+<!ELEMENT etudiant  (photo,nom,prenom,date_naissance,adresse,telephone,email,formation,specialite,niveau,notes)>
+<!ATTLIST etudiant niveau CDATA #REQUIRED>
+<!ATTLIST etudiant id ID #REQUIRED>
+<!ELEMENT photo (#PCDATA)>  
+<!ATTLIST photo src CDATA #REQUIRED>  
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT date_naissance (#PCDATA)>
+<!ELEMENT adresse (rue, ville, code_postal)>
+<!ELEMENT telephone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT formation (#PCDATA)>
+<!ELEMENT specialite (#PCDATA)>
+<!ELEMENT niveau (#PCDATA)>
+<!ELEMENT notes (note*)>
+<!ELEMENT note (#PCDATA)>
+<!ATTLIST note 
+    module    CDATA      #REQUIRED
+    coeff     NMTOKEN    #REQUIRED>
+<!ELEMENT rue (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT code_postal (#PCDATA)>

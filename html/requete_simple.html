@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/inscription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ENETCOM - Inscription</title>
+</head>
+<body>
+<!-- Header -->    
+<header class="header">
+    <div class="container">
+        <!-- Logo à gauche -->
+        <div class="logo">
+            <a href="index.html"><img src="../assets/logoecole.png" alt="#"></a>
+        </div>
+        <!-- End Logo -->
+    <!-- Navigation à droite -->
+        <nav class="main-menu">
+                <ul class="nav-menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i> <span>Accueil</span></a> </li>
+                    <li><a class="active" href="formation.html"><i class="fa fa-graduation-cap"></i> <span>Formations</span></a>
+                        <ul class="dropdown">
+                            <li><a href="etudiants.html?id=1">1ère Année</a></li>
+                            <li><a href="etudiants.html?id=2">2ème Année</a></li>
+                            <li><a href="etudiants.html?id=3">3ème Année</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="inscription.html"><i class="fa fa-user-plus"></i> <span>Inscription</span></a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+        </nav>
+    </div>
+</header>
+      
+      
+      <section>
+      
+        <div class="query-examples">
+    <div class="query-example" onclick="setSimpleQuery()">
+      <h3 class="Req">Requête Simple</h3>
+      <code>//etudiant[moyenne > 15]</code>
+    </div>
+
+
+    <!-- Interface pour saisir et exécuter des requêtes XPath personnalisées -->
+    <div class="query-container">      
+        <div class="query-form">
+          <textarea id="query-input" class="query-input" rows="3" placeholder="Entrez votre requête XPath ici..."></textarea>
+          <button id="execute-button" class="query-button">Exécuter la requête</button>
+        </div>
+        
+        <!-- Zone d'affichage des résultats de la requête -->
+        <div id="result-container" class="result-container">
+          <p>Les résultats s'afficheront ici...</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  
+      <!-- Footer -->
+
+      <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Colonne À propos -->
+            <div class="footer-col">
+                <h4>À propos</h4>
+                <p>La filière IDSD forme des experts en ingénierie des données et systèmes décisionnels, combinant modélisation mathématique, outils informatiques et technologies d'IA.</p>
+            </div>
+    
+            <!-- Colonne Contact -->
+            <div class="footer-col">
+                <h4>Nous contacter</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> ENET'Com, Université de Sfax</li>
+                    <li><i class="fas fa-phone"></i> +216 XX XXX XXX</li>
+                    <li><i class="fas fa-envelope"></i> idsd@ENET'Com.tn</li>
+                </ul>
+            </div>
+    
+            <!-- Colonne Newsletter -->
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Votre email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+    
+            <!-- Colonne Carte -->
+            <div class="footer-col map-col">
+                <h4>Localisation</h4>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.7138177838597!2d10.753072424388673!3d34.83828727287112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002cd2cef7333d%3A0xaa3a1cf6d7fb55b0!2sEcole%20nationale%20d&#39;Electronique%20et%20des%20T%C3%A9l%C3%A9communications%20de%20Sfax%D8%8C%20Technopole%20Sfax%2C%20Route%20Tunis%20km%2011%2C%20cite%20Ons%2C%20Sfax!5e0!3m2!1sfr!2stn!4v1744558309929!5m2!1sfr!2stn" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 Filière IDSD - Tous droits réservés</p>
+            <p>www.enetcom.rnu.tn | Station Sfax</p>
+        </div>
+    </footer>
+</body>
+</html>
+  <script>
+    // Déclaration de la variable qui contiendra le document XML
+    let xmlDoc;
+    
+    // Chargement du document XML avec fetch API
+    // Je comprends que fetch est une API moderne pour faire des requêtes HTTP
+    fetch('../xml/etudiants_moyenne.xml')
+      .then(response => response.text()) // Conversion de la réponse en texte
+      .then(data => {
+        // Analyse du XML avec DOMParser
+        const parser = new DOMParser();
+        xmlDoc = parser.parseFromString(data, "text/xml");
+        
+        // Vérification des paramètres d'URL pour précharger une requête
+        // Cela permet d'exécuter directement une requête quand on arrive depuis un lien
+        const queryParam = getURLParameter('query');
+        if (queryParam === 'simple') {
+          setSimpleQuery();
+        } else if (queryParam === 'complex') {
+          setComplexQuery();
+        }
+      })
+      .catch(error => {
+        // Gestion des erreurs de chargement du XML
+        console.error('Erreur lors du chargement du XML:', error);
+        document.getElementById('result-container').innerHTML = 
+          `<div class="error">Erreur lors du chargement du XML: ${error.message}</div>`;
+      });
+    
+    // Fonction pour récupérer les paramètres de l'URL
+    // Utilisation de URLSearchParams, une API moderne pour manipuler les paramètres d'URL
+    function getURLParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+    
+    // Fonction principale pour exécuter les requêtes XPath
+    function executeXPath(xpath) {
+      // Vérification que le XML est bien chargé
+      if (!xmlDoc) {
+        document.getElementById('result-container').innerHTML = 
+          '<div class="error">Le document XML n\'est pas encore chargé</div>';
+        return;
+      }
+      
+      try {
+        // Exécution de la requête XPath avec l'API DOM intégrée au navigateur
+        // document.evaluate permet d'exécuter des expressions XPath sur un document
+        const result = document.evaluate(xpath, xmlDoc, null, XPathResult.ANY_TYPE, null);
+        
+        let resultType = result.resultType;
+        let resultHtml = '';
+        
+        // Traitement du résultat selon son type (nombre, texte, booléen ou nœuds)
+        switch (resultType) {
+          case XPathResult.NUMBER_TYPE:
+            resultHtml = `<p>Résultat numérique: ${result.numberValue}</p>`;
+            break;
+            
+          case XPathResult.STRING_TYPE:
+            resultHtml = `<p>Résultat texte: ${result.stringValue}</p>`;
+            break;
+            
+          case XPathResult.BOOLEAN_TYPE:
+            resultHtml = `<p>Résultat booléen: ${result.booleanValue}</p>`;
+            break;
+            
+          // Cas le plus courant : un ensemble de nœuds
+          case XPathResult.UNORDERED_NODE_ITERATOR_TYPE:
+          case XPathResult.ORDERED_NODE_ITERATOR_TYPE:
+            // Construction d'un tableau HTML pour afficher les résultats
+            resultHtml = '<table class="result-table">';
+            resultHtml += '<thead><tr><th>ID</th><th>Nom</th><th>Prénom</th><th>Moyenne</th></tr></thead>';
+            resultHtml += '<tbody>';
+            
+            let node;
+            let counter = 0;
+            
+            // Parcours de tous les nœuds retournés par la requête
+            while (node = result.iterateNext()) {
+              counter++;
+              let id = node.getAttribute('id') || 'N/A';
+              
+              // Traitement spécifique pour les nœuds de type "etudiant"
+              if (node.nodeName === 'etudiant') {
+                // Extraction des données avec l'API DOM
+                // L'opérateur ?. (optional chaining) évite les erreurs si l'élément n'existe pas
+                const nom = node.getElementsByTagName('nom')[0]?.textContent || 'N/A';
+                const prenom = node.getElementsByTagName('prenom')[0]?.textContent || 'N/A';
+                const moyenne = node.getElementsByTagName('moyenne')[0]?.textContent || 'N/A';
+                
+                // Ajout d'une ligne au tableau HTML avec les données de l'étudiant
+                resultHtml += `
+                  <tr>
+                    <td>${id}</td>
+                    <td>${nom}</td>
+                    <td>${prenom}</td>
+                    <td>${moyenne}</td>
+                  </tr>
+                `;
+              } else {
+                // Affichage générique pour les autres types de nœuds
+                resultHtml += `
+                  <tr>
+                    <td colspan="5">Nœud: ${node.nodeName} - Contenu: ${node.textContent}</td>
+                  </tr>
+                `;
+              }
+            }
+            
+            resultHtml += '</tbody></table>';
+            
+            // Message si aucun résultat n'est trouvé
+            if (counter === 0) {
+              resultHtml = '<p>Aucun résultat trouvé.</p>';
+            }
+            break;
+            
+          default:
+            resultHtml = '<p>Type de résultat non géré.</p>';
+        }
+        
+        // Insertion du résultat dans le DOM
+        document.getElementById('result-container').innerHTML = resultHtml;
+      } catch (error) {
+        // Gestion des erreurs d'exécution de la requête
+        document.getElementById('result-container').innerHTML = 
+          `<div class="error">Erreur lors de l'exécution de la requête: ${error.message}</div>`;
+      }
+    }
+    
+    // Fonctions pour précharger des requêtes d'exemple
+    function setSimpleQuery() {
+      document.getElementById('query-input').value = "//etudiant[moyenne > 15]";
+      executeXPath("//etudiant[moyenne > 15]");
+    }
+    // Ajout d'un événement au clic sur le bouton d'exécution
+    // L'API addEventListener est une méthode standard pour gérer les événements
+    document.getElementById('execute-button').addEventListener('click', function() {
+      const query = document.getElementById('query-input').value;
+      if (query.trim() === '') {
+        document.getElementById('result-container').innerHTML = 
+          '<div class="error">Veuillez entrer une requête XPath</div>';
+        return;
+      }
+      
+      executeXPath(query);
+    });
+  </script>
+</body>
+</html>

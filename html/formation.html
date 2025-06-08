@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lien css -->   
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Title -->
+    <title>ENETCOM - Ecole Nationale d'Electronique et des Télécommunications de Sfax</title>
+    <style>
+        h1{
+            color: #0E6EB8;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            margin: 30px;
+            text-transform: uppercase;
+        }
+        embed {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->    
+    <header class="header">
+        <div class="container">
+            <!-- Logo à gauche -->
+            <div class="logo">
+                <a href="index.html"><img src="../assets/logoecole.png" alt="#"></a>
+            </div>
+            <!-- End Logo -->
+        <!-- Navigation à droite -->
+            <nav class="main-menu">
+                    <ul class="nav-menu">
+                        <li><a href="index.html"><i class="fa fa-home"></i> <span>Accueil</span></a> </li>
+                        <li><a class="active" href="formation.html"><i class="fa fa-graduation-cap"></i> <span>Formations</span></a>
+                            <ul class="dropdown">
+                                <li><a href="etudiants.html?id=1">1ère Année</a></li>
+                                <li><a href="etudiants.html?id=2">2ème Année</a></li>
+                                <li><a href="etudiants.html?id=3">3ème Année</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="inscription.html"><i class="fa fa-user-plus"></i> <span>Inscription</span></a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> <span>Contact</span></a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+  <h1>PLAN D'ETUDES</h1>
+  <embed src="IDSD_23-24.pdf" type="application/pdf" width="100%" height="600px"/>
+
+
+  <!-- Footer -->
+
+  <footer class="modern-footer">
+    <div class="footer-container">
+        <!-- Colonne À propos -->
+        <div class="footer-col">
+            <h4>À propos</h4>
+            <p>La filière IDSD forme des experts en ingénierie des données et systèmes décisionnels, combinant modélisation mathématique, outils informatiques et technologies d'IA.</p>
+        </div>
+
+        <!-- Colonne Contact -->
+        <div class="footer-col">
+            <h4>Nous contacter</h4>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i> ENET'Com, Université de Sfax</li>
+                <li><i class="fas fa-phone"></i> +216 XX XXX XXX</li>
+                <li><i class="fas fa-envelope"></i> idsd@ENET'Com.tn</li>
+            </ul>
+        </div>
+
+        <!-- Colonne Newsletter -->
+        <div class="footer-col">
+            <h4>Newsletter</h4>
+            <div class="newsletter-box">
+                <input type="email" placeholder="Votre email">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Colonne Carte -->
+        <div class="footer-col map-col">
+            <h4>Localisation</h4>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.7138177838597!2d10.753072424388673!3d34.83828727287112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13002cd2cef7333d%3A0xaa3a1cf6d7fb55b0!2sEcole%20nationale%20d&#39;Electronique%20et%20des%20T%C3%A9l%C3%A9communications%20de%20Sfax%D8%8C%20Technopole%20Sfax%2C%20Route%20Tunis%20km%2011%2C%20cite%20Ons%2C%20Sfax!5e0!3m2!1sfr!2stn!4v1744558309929!5m2!1sfr!2stn" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>© 2025 Filière IDSD - Tous droits réservés</p>
+        <p>www.enetcom.rnu.tn | Station Sfax</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,624 @@
+:root {
+  --blue-color: #0E6EB8;
+  --orange-color: #ff831d;
+}
+h3 {
+  color: var(--orange-color);
+}
+p {
+  line-height: 1.6;
+}
+/* Conteneur du carrousel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+/* Slides */
+.carousel-slide {
+  position: absolute;/* pour superposer les slides */
+  width: 100%;
+  height: 100%;
+  display: flex;/* pour centrer le contenu */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;/* pour l'effet de fondu */
+  padding: 0 20px;
+}
+.carousel-slide.active {
+  opacity: 1;
+}
+/* Contenu */
+.slide-content {
+  max-width: 800px;
+  padding: 40px;
+  background-color: rgba(14, 110, 184, 0.5); /* Réduction de l'opacité pour plus de transparence */
+  border-radius: 10px;
+}
+.subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  color: var(--orange-color);;
+}
+.slide-content p.description{
+  color: #fff;
+}
+.slide-content h2{
+  color: #fff;
+}
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--orange-color);
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+}
+/* Contrôles du carrousel */
+.carousel-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.control-dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.control-dot.active {
+  background-color:var(--blue-color);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2rem;
+  }
+  h2 {
+      font-size: 1.3rem;
+  }
+  .slide-content {
+      padding: 20px;
+  }
+}
+/* Présentation IDSD */
+.presentation-container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+.content-box {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(144, 22, 22, 0.1);/* horizonatl(x) vertical(y) rayon_flou*/
+}
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 500;
+}
+/*
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 25px 0;
+}
+*/
+/* Liste à puces ✓ description */
+.styled-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.styled-list li {
+  line-height: 3;
+  position: relative;
+  padding-left: 30px;
+}
+.styled-list li:before {
+  content: "✓";
+  color: var(--blue-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+/*
+.highlight-box {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 4px solid var(--blue-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.highlight-box h3 {
+  margin-top: 0;
+  color: var(--blue-color);
+}
+*/
+.signature {
+  text-align: right;
+  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+  border-top: 1px dashed #ddd;/*ligne -----*/
+  padding-top: 15px;
+}
+.float-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.float-left-box {
+  float: left;
+  width: 50%; 
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  /* espace entre les deux boîtes */
+}
+
+.float-right-box {
+  float: right;
+  width: 40%; /* la largeur doit s'adapter avec le left-box */
+  padding: 15px;
+  background-color: #f5f7f5;
+  border-radius: 5px;
+}
+
+.float-right-box img {
+  width: 80%;
+  height: 600px;
+  display: block;
+  object-fit: cover; /* Assure que l'image remplit l'espace restant */
+  border-radius: 5px;  transition: transform 0.3s; /* Effet de transition */    
+}
+/* image à droite*/
+.float-right-box img:hover {
+  transform: scale(1.1); /* Agrandissement au survol */
+}
+.clearfix {
+  clear: both; /* essentiel pour éviter les problèmes de layout */
+}
+
+/* Style général de la bannière */
+
+/* Conteneur de la bannière */
+.banner {
+  padding: 40px 20px;
+  text-align: center;
+}
+/* Style du sous-titre */
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 0 auto;
+}
+.stats-banner {
+  display: flex;/*display en horizontal*/
+  align-items: center;
+  background: 
+  linear-gradient(rgba(249, 160, 87, 0.851), rgba(249, 176, 115, 0.85)),
+  url('../assets/ecole.jpg') no-repeat center 30%/ cover;
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  flex-wrap: wrap;/*pour les petits écrans*/
+  justify-content: space-around;
+}
+/* Style de chaque élément statistique */
+.stat-item {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.stat-item:hover {
+  transform: translateY(-5px);/* effet de montée au survol */
+}
+/* Style des chiffres */
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  /*display: inline-block;
+  position: relative;*/
+}
+/* Animation des chiffres */
+@keyframes countUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.stat-number.animate {
+  animation: countUp 1s ease-out forwards;
+}
+
+/* Style du texte descriptif */
+.stat-label {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/* Ligne décorative */
+.stat-item::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  margin: 15px auto 0;
+  opacity: 0.7;
+}
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.main-title, .subtitle {
+    animation: fadeIn 1s ease-out forwards;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .main-title {
+      font-size: 2rem;
+  }
+  .subtitle {
+      font-size: 1rem;
+      letter-spacing: 1px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Styles généraux */
+.metiers-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+
+.section-header h1,  h1{
+  color: var(--blue-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+
+.section-header p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Grille des métiers */
+.metiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cartes de métiers */
+.metier-card {
+  background: white;
+  border-radius: 10px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metier-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color:var(--blue-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.metier-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.metier-card:hover::before {
+  transform: scaleX(1);
+}
+
+.metier-icon {
+  font-size: 2.5rem;
+  color: #13126f;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.metier-card:hover .metier-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.metier-card h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.metier-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--blue-color);
+  font-weight: 600;
+  text-decoration: none;
+  /*transition: all 0.3s ease; pour l'effet de survol */
+}
+/*
+.read-more i {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}*/
+.metier-card:hover .read-more {
+  color: #2c3e50;
+}
+
+/*
+.metier-card:hover .read-more i {
+  transform: translateX(3px);
+}
+*/
+
+/* Bouton View More */
+.view-more {
+  text-align: center;
+  margin-top: 50px;
+}
+.view-more-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #0c0a6b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.view-more-btn:hover {
+  background-color: #2c3e50;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .section-header h1 {
+      font-size: 2rem;
+  } 
+  .metiers-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.parcours-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color:var(--blue-color);
+}
+
+.annees-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.annee-card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 50%;
+}
+
+.annee-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.annee-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(14, 110, 184, 0.9), transparent);
+  padding: 30px;
+  color: white;
+  transform: translateY(100px);
+  transition: transform 0.5s ease;
+}
+
+.annee-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.annee-card:hover .annee-image {
+  transform: scale(1.1);
+}
+
+.annee-card:hover .annee-overlay {
+  transform: translateY(0);
+}
+
+.annee-title {
+  font-size: 1.8rem;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.annee-cta {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: white;
+  color: var(--blue-color);
+
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.annee-cta:hover {
+  background-color: #f1c40f;
+  transform: translateY(-3px);
+}
+
+/* Animation des éléments */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Animation d'apparition des cartes des niveaux */
+.annee-card {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.annee-card:nth-child(1) { animation-delay: 0.1s; }
+.annee-card:nth-child(2) { animation-delay: 0.3s; }
+.annee-card:nth-child(3) { animation-delay: 0.5s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .annees-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .annee-card {
+      width: 100%;
+      max-width: 400px;
+  }
+}
+
+
+
+
+
+/* Styles de la page détails etudiant */
+
+.student-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.student-table td {
+  vertical-align: top;
+  padding: 10px;
+}
+
+.student-table img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.student-table img:hover {
+  transform: scale(1.05);
+}
